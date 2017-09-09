@@ -1,0 +1,25 @@
+{
+  // 必要
+  "name": "url-detect-extension",
+  "version": "1",
+  "manifest_version": 2,
+
+  // 建議，非必要
+  "description": "A chrome extension for detecting url.",
+  "icons": { 
+    "16": "icon.png",
+    "48": "icon.png",
+    "128": "icon.png"
+   },
+
+  // 選一個
+  "content_scripts": [
+    {
+      "matches": ["https://www.facebook.com/*"],
+      "js": ["index.js"]
+    }
+  ],
+  "web_accessible_resources": [
+    "env.json"
+  ]
+}
